@@ -29,10 +29,35 @@
 
 import java.util.Scanner;
 
-
 public class DistanceMultiple {
     public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
 
+
+        System.out.println("Enter the first point (x,y): ");
+        String cord1 = scan.nextLine();
+
+
+        System.out.println("Enter the second point (x,y): ");
+        String cord2 = scan.nextLine();
+
+
+        String[] point1 = cord1.split(",");
+        String[] point2 = cord2.split(",");
+
+
+        double x1 = Double.parseDouble(point1[0].trim());
+        double y1 = Double.parseDouble(point1[1].trim());
+        double x2 = Double.parseDouble(point2[0].trim());
+        double y2 = Double.parseDouble(point2[1].trim());
+
+
+        double xSub = (x2 - x1);
+        double ySub = (y2 - y1);
+        double xSq = (xSub * xSub);
+        double ySq = (ySub * ySub);
+        double xyAdd = (xSq + ySq);
+        System.out.println(Math.sqrt(xyAdd));
 
     }
 
