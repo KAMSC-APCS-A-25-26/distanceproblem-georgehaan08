@@ -47,13 +47,12 @@ public class DistanceMultiple {
         int x2 = Integer.parseInt(parts[2]);
         int y2 = Integer.parseInt(parts[3]);
 
-        double xSub = (x2 - x1);
-        double ySub = (y2 - y1);
+        double xSub = Math.abs(x2 - x1);
+        double ySub = Math.abs(y2 - y1);
         double xSq = (xSub * xSub);
         double ySq = (ySub * ySub);
         double xyAdd = (xSq + ySq);
         System.out.println(Math.sqrt(xyAdd));
-
     }
 
 }
